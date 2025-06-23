@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-bg: #d9f1e4;
+    --clr-white: #eff9f3;
+    --clr-black: #020f07;
+    --fs-text: .95rem;
+    --unset-value: none;
+}
+
+html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-bg, Canvas); 
+
+    img{
+        display: block;
+        height: auto;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    btn {
+        display: inline-block;
+        outline: var(--unset-value);
+        border: var(--unset-value);
+        background-color: transparent;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: var(--unset-value);
+    }
+}
+
+.projects__container {
+    --item-padding-block: 12px;
+    --item-padding-inline: 8px;
+    --img-radius: 8px;
+    --clr-item-bg-color: #72a6a6;
+
+    .project__content {
+        position: relative;
+        display: block;
+        margin: auto;
+
+        
+        .innerItem {
+            display: grid;
+            /* place-items: center; */
+            padding-block: var(--item-padding-block);
+            padding-inline: var(--item-padding-inline);
+            background-color: var(--clr-item-bg-color);
+            border-radius: calc(var(--img-radius) + var(--item-padding-inline));
+            overflow: hidden;
+            margin: var(--item-padding-block);
+        }
+
+        .product__img-container {
+            /* grid-column: 1/2; */
+            display: block;
+            border-radius: var(--item-padding-inline);
+            overflow: hidden;
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+
+            &+div{
+                text-align: center;
+            }
+        }
+
+        .project__button {
+            color: var(--clr-black);
+            font-size: var(--fs-text);
+            background-color: transparent;
+            border: 1px solid var(--clr-white);
+            margin-top: var(--item-padding-inline);
+            padding: calc(var(--item-padding-block) - 6px) calc(var(--item-padding-inline) - 2px);
+            border-radius: calc(var(--item-padding-inline) - 2px);
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: var(--clr-white);
+            }
+        }
+    }
+}

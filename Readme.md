@@ -1,6 +1,7 @@
 # SnapScroll
 
 A lightweight, responsive, and customizable horizontal scroll snapping library for modern web projects.
+Here is the live: [easysnap](https://willem-aw.github.io/easyscrollsnap/)
 
 ---
 
